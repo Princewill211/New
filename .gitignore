@@ -1,0 +1,8 @@
+school_env
+__pycache__/
+__pycache__/
+media/
+mediafiles/
+*.pyc
+*.pdf
+db.sqlite3

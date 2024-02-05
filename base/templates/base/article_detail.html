@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %} Welcome to The Detail Page {% endblock title %}
+
+
+
+
+{% block content %}
+
+
+<div class="detail-page-info">
+    <!-- Become A Member<br> -->
+    <a class="return-home-link" href="{% url 'home'%}">Home</a> <br>
+    <span >Vol 1, No. 1 (April 2023)</span>  <br>
+    <p class="detail-page-links">{{article.title}}</p>
+   
+<!-- <h1 class="detail-page-title"><span class="info-2"><h1 class="detail-page-title">{{article.title}}</span></h1><br>  -->
+</div>
+<!-- 
+<div class="print-btn-container">
+    
+    <a href="{% if article.image %} {{article.image.url}} {% endif %}" download>Download image</a>
+</div> -->
+
+<div class="detail-page-content" id="detail-page-content">
+<p class="article-images"><img class="article-images-2"   src=" {% if article.image %} {{article.image.url}} {% endif %}" alt="Article image"></p><br/>
+
+
+<p class="ijbsrm-class">ijbsmr</p>
+<h1 class="detail-page-title">{{article.title}}</h1><br>
+<p class="detail-p-author-name"><span class="detail-p-author-placeholder">Authors:</span>{{article.name_of_corresponding_author}}</p><br>
+<p class="detail-p-author-excerts"><span class="detail-page-abstract">Abstracts:</span>{{article.main_text|safe}}</p><br>
+{% if user.is_authenticated and request.user.is_staff %}
+<a class="update-link" href="{% url 'update_article'  article.pk %}">Edit</a>
+<a class="delele-article-link" href="{%  url 'delete_article'  article.pk %}"> Delete Article</a>
+{% endif %}
+</div>
+
+
+{% endblock content %}

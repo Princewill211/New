@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}{{ article.title}}{% endblock title %}
+
+
+{% block content %}
+
+<h1 class="add-p-header">Add Article</h1>
+<div class="form-group">
+<form method="POST" action="." enctype="multipart/form-data" class="form-container">
+    {% csrf_token %}
+    {{form.media }}
+    {{form.as_p}}
+    <button class="btn-btn-secondary">submit</button>
+</form>
+</div>
+
+
+  
+{% endblock content %}

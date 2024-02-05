@@ -1,0 +1,87 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %} Welcome {% endblock title %}
+
+
+{% block content %}
+
+<style>
+    /* .home-grid-container{
+        display:grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        
+    } */
+
+    /* .home2-grid-container{
+        display:flex;
+        justify-content: space-around;
+        padding-right: 40px;
+    } */
+
+    /* .two-grid-template{
+       display: grid; 
+    } */
+
+</style>
+
+<div class="membership-info">
+    <p class="membership-write-up">Welcome</p>
+</div>
+
+<div class="home-header-container">
+<div class="body-image-container">
+    <img class="body-image" src="{% static 'images/body-image.jpg' %}" >
+</div>
+
+<div class="home-header-write-up">
+    <h1 class="home-header-write-up">
+        Welcome To The<br> international Journal<br> of Biological Science<br> And Molecular <br>Research (IJBSMR)
+    </h1><br>
+    <p class="home-header-write-up-para">The Faculty of Biological Sciences, Alex Ekwueme<br> Federal University, Ndufu Alike Ebonyi, Ebonyi State of<br> Nigeria wishes to introduce to everyone
+        "The <br> International Journal of Biological Science and<br> Molecular Research" e-ISSN:3027.20668; Print ISSN:<br> 3026-9830.AN OPEN ACCESS peer reviewed
+        quarterly<br> multi-disciplinary journai, it aims at disseminating<br> information on multi-disciplinary research<br> and sundry issues. The scope of the journal 
+        covers areas <br> of Biology, Botany, Zoology, Biochemistry, Mycology,<br> Plant Pathology, Microbiology, Biotechnology,<br> Molecular Biology and Genetics, Agricultural Science,<br>
+        Enviromental biology and other related fields.
+    </p>
+
+</div>
+</div>
+<!-- grid-display-of-article -->
+  <hr>
+<div class="home-grid-container">
+    <div class="home2-grid-">
+    
+    
+        {% for article in object_list %}
+        <p class="article-images"><img class="article-images-2"  src=" {% if article.image %} {{article.image.url}} {% endif %}"></p><br/>
+        {% endfor %}
+     
+    </div>
+    <div class="home-page-grid-topic">
+
+        {% for article in object_list %}
+
+        <p class="post-article"><a class="link-button-style"
+        href="{% url 'article-detail' article.pk %}  ">{{article.title}}</a></p><br/><span>{{article.created|timesince}} ago</span><br/>
+        <p class="article-author-name">{{article.name_of_corresponding_author}}</p><br/>
+        <a class="detail-page-link" href="{% url 'article-detail' article.pk %}">
+
+        View Full Article</a><br>
+        {% endfor %}    
+        <hr>
+        </div>
+    <div class="home-page-grid-recent-act">
+       <h4> Recent Activities</h4>
+       <hr>
+       {% for article in object_list %}
+       <p class="post2-article"><a class="recent-activities-link" href="{% url 'article-detail' article.pk %}">
+        {{ article.title}}</a></p> <br>
+       <hr>
+       {% endfor %}
+    </div>
+</div>
+
+
+  
+{% endblock content %}

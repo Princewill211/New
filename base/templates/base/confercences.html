@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %} Welcome {% endblock title %}
+       
+
+{% block content %}
+
+  <div>
+    <h2 class="confenrence-header">conference</h2>
+    </div>
+  
+       <p class="conference-para">Some pictorial excerts during the Pre-Conference workshop</p>
+    <div class='conference-image-container'>
+      <div> <img class="conference-image" src="{% static 'images/InShot_1.jpg' %}" /></div>
+      <div> <img class="conference-image" src="{% static 'images/InShot_2.jpg' %}" /></div>
+      <div> <img class="conference-image" src="{% static 'images/InShot_3.jpg' %}" /></div>
+      <div> <img class="conference-image" src="{% static 'images/InShot_4.jpg' %}" /></div> 
+      <div> <img class="conference-image" src="{% static 'images/InShot-5.jpg' %}" /></div>
+   
+   </div> 
+
+   <div>
+    <p class="conference-video-para">
+     Video of the Pre-Conference Workshop of the Meiden Conference of the Faculty of the Biological Science,<br>
+     Alex Ekwueme FederalUniversity Ndufu Alike, Ebonyi State Nigeria.
+    </p>
+   </div>
+   <!-- <video class="conference-video" controls  autoplay loop >
+    <source src="{% static 'video//mov_bbb.mp4' %}" type="video/mp4">
+   </video> -->
+   <video class="conference-video" controls>
+    <source src="{% static 'video/VID-20240123-WA0060.mp4' %}" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+    <div class="docx-file-link"> <a href="{% static 'images/front-Page-Book-of-Abstract-1-1.docx' %}" download>
+      link to front-Page-Book-of-Abstract-1-1.docx </a></div>
+   <div class="docx-file-link"> <a href="{% static 'images/Book of Abstract-2 (1).docx 1.docx 1.docx' %}" download>
+         link to download Book of Abstract-2 (1).docx 1.docx 1.docx </a></div>
+   <div class="docx-file-link"> <a href="{% static 'images/PROFESSOR A.A.UWAKWES SPEECH ON BIOSCIENCE RESEARCH-1.docx' %}" download>
+            link to download PROFESSOR A.A.UWAKWE'S SPEECH ON BIOSCIENCE RESEARCH-1.docx</a></div>
+   <div class="docx-file-link"> <a href="{% static 'images/REINVIGORATION OF BIOSCIENCE RESEARCH IN NIGERIA.doc Prof. Ugbogu O.doc' %}" download>
+               link to download REINVIGORATION OF BIOSCIENCE RESEARCH IN NIGERIA.doc Prof. Ugbogu O.doc </a></div>
+   <div class="docx-file-link"> <a href="{% static 'images/Bioscience Reasearch updated.docx' %}" download>
+                  link to download Bioscience Reasearch updated.docx </a></div>
+  
+{% endblock content %}

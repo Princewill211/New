@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock title %}
+
+
+{% block content %}
+
+<h1 class="add-p-header">Login</h1>
+<div class="form-group">
+<form method="POST" action="." enctype="multipart/form-data" class="form-container">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-secondary">Login</button>
+</form>
+</div>
+
+
+  
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %} Delete Article{% endblock title %}
+
+
+{% block content %}
+
+<h2 class="add-p-header">Delete Article</h2>
+<br/><br/>
+<h3 class="delete_article1">Delete: {{article.title }}</h3>
+
+<br/>
+<div class="form-group">
+<form method="POST" action="{% url 'delete_article' article.pk%}" enctype="multipart/form-data" class="form-container">
+    {% csrf_token %}
+    <strong>Are You Sure?</strong><br/><br/>
+    <button class="btn-btn-secondary">Delete Article</button> <a class="return-back-link" href="{% url 'article-detail' article.pk %}">Take me back</a>
+</form>
+</div>
+
+
+  
+{% endblock content %}
