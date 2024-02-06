@@ -851,11 +851,7 @@ nav .fa{
         color: blue;
     }
 
-    .current-image1{
-        width: 50px;
-        margin-left: 30px;
-        
-    }
+ 
     .current-image-container{
         width: 50px;
         margin-left: 30px;
@@ -876,6 +872,13 @@ nav .fa{
         width: 500px;
         row-gap: 5px;
 
+}
+
+   .current-image1 {
+    width: 150px;
+    /* vertical-align: middle;
+    margin-top: 70px;
+    margin-left: 95px; */
 }
     .footer-image{
         /* display:flex;
@@ -901,6 +904,14 @@ nav .fa{
         width:70px;
         margin-left: 9px;
         color: #636c77;
+    }
+    .form-container {
+        width: 100px;
+        margin-right: 5px;
+    }
+    .form-group {
+        width: 100px;
+        margin-right: 1px;
     }
 
     .create-link {
