@@ -5,7 +5,24 @@ from .models import UserProfile
 
 
 
+
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        fields = [
+            'username',
+            'enail',
+        ]
+
+
+
+
+
+
 class userProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('is_author',)
+        fields = [
+            'is_author',
+            'profile_image',
+            ]

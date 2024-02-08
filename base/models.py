@@ -23,6 +23,7 @@ class Article(models.Model):
      main_text = RichTextField(blank=True, null=True)
      # main_text = models.TextField(null=True, blank=True)
      image = models.ImageField(upload_to='uploads/article_images',blank='True', null='True')
+     pdf_upload = models.FileField(upload_to='uploads/article_images/pdf',blank='True', null='True')
      published= models.BooleanField(default=False)
      updated = models.DateTimeField(auto_now=True)
      created = models.DateTimeField(auto_now_add=True)

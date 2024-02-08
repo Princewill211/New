@@ -6,7 +6,7 @@ from .models import Article
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ('title', 'type_of_articles', 'name_of_corresponding_author','email_of_corresponding_author','other_author_names','abstract','key_words','main_text', 'image',)
+        fields = ('title', 'type_of_articles', 'name_of_corresponding_author','email_of_corresponding_author','other_author_names','abstract','key_words','main_text', 'image','pdf_upload',)
 
         widgets = {            
             'title':forms.TextInput(attrs={'class':'form-title-styling', 'placeholder':' Input Your Title'}),
@@ -18,6 +18,7 @@ class ArticleForm(forms.ModelForm):
             'key_words':forms.TextInput(attrs={'class': 'form-key_words-styling', 'placeholder':'write 5-6 keywords'}),
             'main_text':forms.Textarea(attrs={'class': 'form-main_text-styling', 'placeholder':'write your Introduction, Materials and methods, Results, Disscussion,Conclusion e.t.c'}),
             'image':forms.FileInput(attrs={'class': 'form-image-styling',}),
+            'pdf_upload':forms.FileInput(attrs={'class': 'form-image-styling',}),
            
             
         }

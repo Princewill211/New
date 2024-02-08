@@ -42,21 +42,20 @@
   </div>
 
 {% endif %}
-
-
 {% if user.is_authenticated %}
 <div>
-  <a href="{% url 'userprofile' user.pk %}">{{ user.username }}</a>
+  <a href="{% url 'profile' user.id %}"><p class="greeting-user">Hi</p>{{user.username}}</a>
 </div>
-
 {% endif %}
+
+
 </div>
   
         
   <p class="showMenu-class"><i class="fa fa-bars" onclick=showMenu()></i>     
 
     <div class="image-container">
-      <img class="footer-image" src="{% static 'images/new-change.jpg' %}" />
+      <img class="footer-image" src="{% static 'images/lastest.jpg' %}" />
     </div>
     <p class="modification-para"> This site was modified but all it's contents are still the same.</p>
         <div class="link-to-different-page"  id="navLinks">
