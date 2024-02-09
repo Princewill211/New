@@ -890,6 +890,12 @@ label{
     color: #636c77; 
 }
 
+/* current issues styling */
+.current-issues-header{
+    margin-left: 30px;
+    color: #636c77;
+}
+
 
 
 
@@ -915,7 +921,7 @@ nav .fa{
         margin-bottom: 6px;
     }
     .modification-para{
-        font-size: 15;
+        font-size: 15px;
         color: #636c77;
     }
     .link-to-different-page{
@@ -995,15 +1001,21 @@ nav .fa{
         padding-top: 30px;
         
 }
+
     .body-image{
         width: 190px;
         /* vertical-align: middle;
         margin-top: 70px;
         margin-left: 95px;  */
     }
+    .category-detail-title {
+        margin-left: 30px;
+        color: #636c77;
+        margin-bottom: 2px;
+    }
 
     .search-button {
-        width:70px;
+        margin-top: 2px;
         margin-left: 9px;
         color: #636c77;
     }
