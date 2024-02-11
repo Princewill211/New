@@ -1,6 +1,6 @@
 from typing import Any
 from django.db.models.query import QuerySet
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render,redirect,HttpResponse,get_object_or_404
 from .pdf import html2pdf
 # from django.http import HttpResponse
 # from django.contrib import messages
@@ -122,6 +122,10 @@ class DeleteArticleView(DeleteView):
     model = Article 
     template_name = 'base/delete_article.html'
     success_url = reverse_lazy('home')
+
+    # def get_object(self):
+    #     id_ = self.kwargs.get("id")
+    #     return get_object_or_404( Article, id=id_ )
 
 
 # templates

@@ -18,9 +18,41 @@
     margin-top: 13px;
 }
 /* styling for archives ending para */
+.last-archives-para2{
+    margin-left: 8; 
+}
+.docx-file-link{
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+.previous-articles{
+    margin-left: 20px;
+}
+
+.last-archives-para{
+    margin-left: 30px;
+    color: #636c77;
+}
 .volume-4-para{
     margin-left:30px;
     color: #636c77;
+}
+.docx-file-link1{
+    margin-top: 4px;
+    margin-bottom: 8px; 
+}
+.pdf-download{
+    padding: 8px;
+    color: white;
+    margin-left: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    background-color: rgb(82, 82, 227) ;
+}
+.author-name-style{
+    display:inline-block;
+    margin-right: 12px;
 }
 
 .registration-container{
@@ -925,7 +957,7 @@ nav .fa{
         color: #636c77;
     }
     .link-to-different-page{
-        position: absolute;
+        position: fixed;
         background-color: rgb(106, 106, 156);
         height: 100vh;
         width: 200px;

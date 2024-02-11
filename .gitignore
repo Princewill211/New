@@ -4,5 +4,4 @@ __pycache__/
 media/
 mediafiles/
 *.pyc
-*.pdf
 db.sqlite3

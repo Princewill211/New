@@ -13,6 +13,7 @@ class Article(models.Model):
           ('Research article','Research article'),
           ('Review article','Review article'),
           ('Short communication','Short communication'),
+          ('Case study','Case study'),
      }
      type_of_articles = models.CharField(max_length=200, blank=True, null=True, choices=article_choices)
      name_of_corresponding_author = models.CharField(max_length=200, default='')
