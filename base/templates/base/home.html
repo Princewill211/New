@@ -50,15 +50,17 @@
 <!-- grid-display-of-article -->
   <hr>
 <div class="home-grid-container">
-    <div class="home2-grid-">
-    
-    
-        {% for article in object_list %}
-        <p class="article-images"><img class="article-images-2"  src=" {% if article.image %} {{article.image.url}} {% endif %}"></p><br/>
-        {% endfor %}
-     
-    </div>
+
     <div class="home-page-grid-topic">
+
+        <div class="home2-grid-">
+    
+    
+            <!-- {% for article in object_list %} -->
+            <p class="article-images"><img class="article-images-2"  src=" {% if article.image %} {{article.image.url}} {% endif %}"></p><br/>
+            <!-- {% endfor %} -->
+         
+        </div>
 
         {% for article in object_list %}
 
