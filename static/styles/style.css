@@ -1098,7 +1098,7 @@ nav .fa{
     .search-button {
         width: 90px;
         margin-top: 2px;
-        margin-left: 9px;
+        margin-left: 2px;
         color: #636c77;
     }
     .form-container {
@@ -1111,7 +1111,10 @@ nav .fa{
     }
 
     .create-link {
-    width:50px ;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;    
+    width:80px ;
     color: white;
     /* background-color: rgb(82, 82, 227);
     padding: 8px;
