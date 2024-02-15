@@ -847,10 +847,15 @@ label{
 /* home pagegrid-styling */
 .home-grid-container{
     display:grid;
-    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-columns:  2fr 1fr;
     
 }
 
+.home2-grid{
+    display:grid;
+    grid-template-columns:  1fr 4fr;
+    
+}
 
 
 /* current issues styling */
@@ -991,7 +996,14 @@ nav .fa{
     }
     
     
-    
+    /* home page grid */
+    .home2-grid{
+        grid-template-columns: 1fr;
+        margin-bottom: 20px;
+    }
+    .article-images-2{
+        width: 100%;
+    }
     .link-to-different-page, .link-page {
         display: block;
         color: white;

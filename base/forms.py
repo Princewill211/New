@@ -17,7 +17,7 @@ class ArticleForm(forms.ModelForm):
             'abstract':forms.Textarea(attrs={'class': 'form-abstract-styling', 'placeholder':'input your Description' }),
             'key_words':forms.TextInput(attrs={'class': 'form-key_words-styling', 'placeholder':'write 5-6 keywords'}),
             'main_text':forms.Textarea(attrs={'class': 'form-main_text-styling', 'placeholder':'write your Introduction, Materials and methods, Results, Disscussion,Conclusion e.t.c'}),
-            'image':forms.FileInput(attrs={'class': 'form-image-styling',}),
+            'image':forms.FileInput(attrs={'class': 'form-image-styling'}, ),
             'pdf_upload':forms.FileInput(attrs={'class': 'form-image-styling',}),
            
             
